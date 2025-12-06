@@ -1,0 +1,260 @@
+.table-wrapper {
+  position: relative;
+}
+
+.scroll-hint {
+  text-align: center;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.table-container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  max-height: 70vh; /* Enable vertical scrolling */
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  table-layout: fixed;
+  min-width: 1650px; /* Ensure table has enough width for fixed columns */
+}
+
+.transaction-table thead {
+  background: #1a1f2c;
+  border-bottom: none;
+}
+
+.transaction-table th {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background: #1a1f2c;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #2d3748;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column Widths */
+.transaction-table th:nth-child(1) { width: 150px; } /* Transaction ID */
+.transaction-table th:nth-child(2) { width: 120px; } /* Date */
+.transaction-table th:nth-child(3) { width: 130px; } /* Customer ID */
+.transaction-table th:nth-child(4) { width: 160px; } /* Customer Name */
+.transaction-table th:nth-child(5) { width: 130px; } /* Phone Number */
+.transaction-table th:nth-child(6) { width: 80px; }  /* Gender */
+.transaction-table th:nth-child(7) { width: 60px; }  /* Age */
+.transaction-table th:nth-child(8) { width: 160px; } /* Product Category */
+.transaction-table th:nth-child(9) { width: 90px; }  /* Quantity */
+.transaction-table th:nth-child(10) { width: 130px; } /* Total Amount */
+.transaction-table th:nth-child(11) { width: 150px; } /* Customer Region */
+.transaction-table th:nth-child(12) { width: 110px; } /* Product ID */
+.transaction-table th:nth-child(13) { width: 160px; } /* Employee Name */
+
+.transaction-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s;
+  height: auto;
+}
+
+.transaction-table tbody tr:hover {
+  background: var(--background);
+}
+
+.transaction-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.transaction-table td {
+  padding: 0.75rem 0.75rem;
+  color: var(--text-primary);
+  vertical-align: top; /* Align to top for multi-line content */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: 1px solid transparent; /* Prevent border collapse issues */
+}
+
+.date-cell {
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.customer-cell {
+  /* max-width removed, handled by table-layout: fixed */
+  position: relative;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.customer-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.product-cell {
+  max-width: 180px;
+}
+
+.product-name {
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-brand {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quantity-cell {
+  font-weight: 600;
+  text-align: center;
+}
+
+.price-cell,
+.amount-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.discount-cell {
+  color: var(--success-color);
+  font-weight: 500;
+  text-align: center;
+}
+
+.payment-cell {
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.status-delivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-shipped {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-processing {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-returned {
+  background: #fce7f3;
+  color: #9f1239;
+}
+
+.status-pending {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+
+.status-default {
+  background: var(--background);
+  color: var(--text-secondary);
+}
+
+/* Responsive table */
+@media (max-width: 1200px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .transaction-table {
+    min-width: 1000px;
+  }
+}
+
+/* Scrollbar styling */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
