@@ -41,24 +41,26 @@ A high-performance, full-stack web application engineered to manage, analyze, an
 
 ### Quick Start
 
-1.  **Clone the Repository**
+1.  **Download The Dataset & Add in the ROOT Folder : <u>[Dataset Link](https://drive.google.com/file/d/1tzbyuxBmrBwMSXbL22r33FUMtO0V_lxb/view)</u>**
+
+2.  **Clone the Repository**
     ```bash
     gh repo clone Krishna-mishra-26/Sales-Management-System
     cd TruEstate
     ```
 
-2.  **Install Dependencies (Root)**
+3.  **Install Dependencies (Root)**
     ```bash
     npm install
     ```
 
-3.  **Start the Application**
+4.  **Start the Application**
     This command concurrently starts both the backend API (Port 5000) and frontend client (Port 3000).
     ```bash
     npm run dev
     ```
 
-4.  **Access the Application**
+5.  **Access the Application**
     Navigate to `http://localhost:3000`
 
 ## 📂 Project Structure
@@ -81,7 +83,6 @@ TruEstate/
 │
 └── truestate_assignment_dataset.csv  # Source Data
 ```
-## 👉🏻 <u>[Source Dataset Download & Add in ROOT FOLDER](https://drive.google.com/file/d/1tzbyuxBmrBwMSXbL22r33FUMtO0V_lxb/view)</u>
 
 ## 🔌 API Reference
 
