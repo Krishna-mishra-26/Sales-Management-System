@@ -1,5 +1,9 @@
 # Sales-Management-System
 
+
+https://github.com/user-attachments/assets/a9f94c02-867f-4aa7-9b06-340c1e813c9e
+
+
 A high-performance, full-stack web application engineered to manage, analyze, and visualize large-scale retail sales datasets. This system leverages a modern React frontend and a robust Node.js backend to deliver sub-second search and filtering capabilities across millions of records.
 
 ##  Key Features
